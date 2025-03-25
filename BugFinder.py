@@ -5,7 +5,7 @@ import re
 import socket
 from bs4 import BeautifulSoup
 
-def scan_website(event=None):
+def scan_website():
     url = url_entry.get()
     results_text.delete(1.0, tk.END)
     
@@ -95,7 +95,6 @@ def create_gui():
     tk.Label(root, text="Enter Website URL:", font=("Arial", 12), bg="#2C3E50", fg="white").pack(pady=5)
     url_entry = tk.Entry(root, width=50, font=("Arial", 12))
     url_entry.pack(pady=5)
-    url_entry.bind("<KeyRelease>", scan_website)  # Trigger scan on input change
     
     button_frame = tk.Frame(root, bg="#2C3E50")
     button_frame.pack(pady=5)
